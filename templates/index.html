@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipoqueira DevOps</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Pipoqueira DevOps</h1>
+        <p class="subtitle">Dispare o pipeline para estourar uma nova versão</p>
+
+        <div class="pipoqueira-box">
+            <div id="display-container">
+                <span id="display-icon" class="step-icon-3d">🍿</span>
+            </div>
+        </div>
+
+        <button id="btn-push" onclick="dispararPipeline()">Fazer Push</button>
+
+        <div id="status" class="status-box">
+            <span id="status-text">Aguardando novo commit...</span>
+        </div>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
