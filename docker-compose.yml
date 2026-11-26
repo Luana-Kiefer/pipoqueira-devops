@@ -1,0 +1,14 @@
+services:
+  pipoqueira-web:
+    image: ${DOCKER_IMAGE:-luanakiefer/pipoqueira-devops:latest}
+    container_name: pipoqueira-devops
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
